@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.example.harshpokharna.nytmostpopulararticles"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // AppCompat Support Library
+    compile 'com.android.support:appcompat-v7:22.2.1'
+
+    // Android Design Support Library
+    compile 'com.android.support:design:22.2.0'
+
+    // ButterKnife
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+    // Dagger 2
+    compile 'com.google.dagger:dagger:2.0'
+    apt 'com.google.dagger:dagger-compiler:2.0'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
+    //Gson
+    compile 'com.google.code.gson:gson:2.3'
+
+    // RecyclerView
+    compile 'com.android.support:recyclerview-v7:22.2.1'
+
+    // OK Http
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+
+    // retrofit
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+
+    // RxAndroid
+    compile 'io.reactivex:rxandroid:1.0.1'
+
+    //Picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
+}
